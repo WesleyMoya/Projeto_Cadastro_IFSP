@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Cidades</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos customizados -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Fonte chamativa */
+            color: white; /* Cor do texto */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Para centralizar verticalmente */
+            background: linear-gradient(45deg, #3498db, #8e44ad, #e74c3c, #3498db); /* Cores do gradiente */
+            background-size: 400% 400%; /* Tamanho do gradiente animado */
+            animation: mudarCores 10s linear infinite; /* Animação do gradiente */
+        }
+        .caixa {
+            background-color: rgba(0, 0, 0, 0.5); /* Cor sólida com transparência */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem; /* Tamanho da fonte do título */
+            margin-bottom: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Animação do gradiente */
+        @keyframes mudarCores {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="caixa">
+            <h1 class="mt-5">Bem-vindo ao Sistema de Registro de Cidades</h1>
+            <p>Escolha uma das opções abaixo:</p>
+            <ul>
+                <li><a class="btn btn-primary btn-lg" href="CadastroCidade.html">Registrar uma Nova Cidade</a></li>
+                <li><a class="btn btn-secondary btn-lg" href="ListarCidade.php">Ver Cidades Registradas</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (opcional, apenas se você precisar de funcionalidades do Bootstrap que usam JavaScript) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
