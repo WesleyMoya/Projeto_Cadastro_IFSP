@@ -22,6 +22,8 @@
             <th>Código</th>
             <th>Nome</th>
             <th>Estado</th>
+            <th>Alterar</th>
+            <th>Excluir</th>
         </tr>
         <?php
             while($row = mysqli_fetch_array($result)){
@@ -29,7 +31,8 @@
                 echo "<td>".$row['ID']."</td>";
                 echo "<td>".$row['nome']."</td>";
                 echo "<td>".$row['estado']."</td>";
-                echo "</tr>";
+                echo "<td><a href='AlteraCidade.php?id=".$row['ID']."'>Alterar</a></td>";
+                echo "<td><a href='DeletarCidade.php?id=".$row['ID']."'>Excluir</a></td>";
             }
         ?>
     </table>
