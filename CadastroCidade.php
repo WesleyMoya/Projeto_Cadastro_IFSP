@@ -26,5 +26,7 @@
             echo mysqli_error($con);
         }
     ?>
+    <a href="ListarCidade.php">Listar Cidades Cadastradas</a>
+    <a href="CadastroCidade.html">Cadastrar outra cidade</a>
 </body>
 </html>

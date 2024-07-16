@@ -26,5 +26,6 @@
         else
             echo "Erro ao atualizar dados".mysqli_error($con);
     ?>
+    <a href="ListarCidade.php">Voltar</a>
 </body>
 </html>
