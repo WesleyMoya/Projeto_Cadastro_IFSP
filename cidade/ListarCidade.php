@@ -8,12 +8,12 @@
 </head>
 <body>
     <?php
-        include('includes/conexao.php');
+        include('../includes/conexao.php');
         $sql = "SELECT * FROM cidade";
         /// Executa a consulta
         $result = mysqli_query($con, $sql);
         /// Retorna apenas uma linha
-        $row = mysqli_fetch_array($result);
+       // $row = mysqli_fetch_array($result);
     ?>
     <h1>Consulta de Cidades</h1>
     <a href = "CadastroCidade.html">Cadastrar Nova Cidade</a>

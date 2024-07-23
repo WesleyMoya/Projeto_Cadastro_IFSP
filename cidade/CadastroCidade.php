@@ -8,7 +8,7 @@
 </head>
 <body>  
     <?php
-        include('includes/conexao.php');
+        include('../includes/conexao.php');
         $nome = $_POST['nome'];
         $estado = $_POST['estado'];
         $sql = "INSERT INTO cidade (nome, estado)";

@@ -1,5 +1,5 @@
 <?php
-    include('includes/conexao.php');
+    include('../includes/conexao.php');
     $id = $_GET['id'];
     $sql = "SELECT * FROM cidade WHERE id=$id";
     $result = mysqli_query($con,$sql);

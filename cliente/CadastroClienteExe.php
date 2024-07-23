@@ -9,23 +9,24 @@
 <body>  
     <?php
         // Inclui o arquivo de conexão com o banco de dados
-        include('includes/conexao.php');
+        include('../includes/conexao.php');
 
         // Obtém os dados enviados pelo formulário
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $senha = $_POST['senha'];
+        $ativo = $_POST['ativo'];
 
         // Prepara o comando SQL para inserção dos dados
-        $sql = "INSERT INTO cliente (nome, email, senha)";
-        $sql .= " VALUES ('$nome', '$email', '$senha')";
+        $sql = "INSERT INTO cliente (nome, email, senha, ativo)";
+        $sql .= " VALUES ('$nome', '$email', '$senha', '$ativo')";
 
         echo "<h1>Dados do Cliente</h1>";
         echo "Nome: $nome<br>";
-        echo "Email: $email<br>";
-        // Não exiba a senha por motivos de segurança
-        // echo "Senha: $senha<br>";
-
+        echo "Email: $email<br>";   
+        echo "Senha: $senha<br>";
+        echo "Ativo: $ativo<br>";
+        
         // Executa o comando no banco de dados
         $result = mysqli_query($con, $sql);
 
@@ -37,7 +38,7 @@
             echo mysqli_error($con); // Mostra o erro do MySQL, se houver
         }
     ?>
-    <a href="ListarClientes.php">Listar Clientes Cadastrados</a>
-    <a href="CadastroCliente.html">Cadastrar outro cliente</a>
+    <a href="ListarCliente.php">Listar Clientes Cadastrados</a>
+    <a href="CadastroCliente.php">Cadastrar outro cliente</a>
 </body>
 </html>
